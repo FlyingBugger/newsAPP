@@ -9,34 +9,22 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View,
-  Image，
-  TouchableOpacity
+  View
 } from 'react-native';
 
-import { Icon } from 'react-native-elements';
-export default class Home extends Component {
-
+export default class details extends Component {
+  static navigationOptions={
+    title:"find",
+    tabBarLabel: 'find',
+  }
   render() {
     return (
       <View style={styles.container}>
-        <View>
-        <TouchableOpacity
-             onPress={this.navigateS()}
-        >
-        <Image
-           source={require("../images/home.png")}
-           style={{width:25,height:25}}
-        />
-        </TouchableOpacity>
-        </View>
-
+        <Text>
+            details
+        </Text>
       </View>
     );
-  }
-
-  navigateS(){
-    console.log(this.props)
   }
 }
 
