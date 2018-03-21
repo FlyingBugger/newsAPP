@@ -10,19 +10,23 @@ import {
   StyleSheet,
   Text,
   View,
-  Image，
+  Image,
   TouchableOpacity
 } from 'react-native';
-
+import { StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 export default class Home extends Component {
 
   render() {
+    const { navigate }=this.props.navigation;
+    alert(1)
+    console.log(this.props.navigation)
     return (
       <View style={styles.container}>
         <View>
         <TouchableOpacity
-             onPress={this.navigateS()}
+             onPress={()=>navigate("detail",{article:"king"})}
+             title="new"
         >
         <Image
            source={require("../images/home.png")}
@@ -35,9 +39,7 @@ export default class Home extends Component {
     );
   }
 
-  navigateS(){
-    console.log(this.props)
-  }
+
 }
 
 const styles = StyleSheet.create({

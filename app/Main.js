@@ -7,13 +7,16 @@ import HomePage from './Home'
 import FindPage from './Find'
 import MinePage from './Mine'
 
-
+//分页栏
 export default TabNavigator(
   {
     Home: { screen: HomePage,
       path: '/main',
       navigationOptions:{
        tabBarLabel: '首页',
+       // tabBarOnPress:(({route,index},jumpToInde)=>{
+       //   console.warn(1);
+       // }),
        tabBarIcon:({tintColor,focused})=>(
          <Image
             source={require("../images/home.png")}

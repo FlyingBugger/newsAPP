@@ -13,9 +13,17 @@ import {
 } from 'react-native';
 
 export default class details extends Component {
-  static navigationOptions={
-    title:"find",
-    tabBarLabel: 'find',
+  static navigationOptions=({navigation,navigationOptions})=>{
+    const {params}=navigation.state
+    return {
+      title:params ?params.article:"文章详情",
+      headerTitleStyle:{
+
+            alignItems:"center",
+            color:"red"
+        },
+
+    }
   }
   render() {
     return (

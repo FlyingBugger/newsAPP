@@ -40,7 +40,6 @@ const routers= StackNavigator(
     },
     detail:{
       screen:detailsPage,
-
     }
   },{
     navigationOptions:{
